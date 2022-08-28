@@ -1,7 +1,11 @@
 
-# React Group Chatup UI Component
+# React Group Chatup UI Component V 1.0.1
 
 React UI component to allow public group chat ui on react projects & platforms where multiple users can participate in public group chat.
+
+## Demo
+
+[View Demo](https://react-chat-ui-component-demo.web.app)
 
 ## Features
 
