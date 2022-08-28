@@ -1,70 +1,90 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Group Chatup UI Component
 
-## Available Scripts
+React UI component to allow public group chat ui on react projects & platforms where multiple users can participate in public group chat.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Customizable.
+- Easy to use.
+- Responsive.
+- Cross platform
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Requirements
 
-### `npm test`
+- React version >= 16
+- Node version >= 14 
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  npm install react-group-chatup
+```
+    
+## Usage/Examples
 
-### `npm run build`
+```javascript
+import React, {useState} from 'react
+import Chatbox from 'react-group-chatup'
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+function App() {
+  const [messages, setMessages] = useState([])
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  const _onSendMessage = (data) => {
+    const messageObj = {
+      avatar: userIcon,
+      auther: 'me',
+      auther_name: 'Demo User',
+      data: data,
+      created_at: new Date().toDateString()
+    }
+    _updateMessageList(messageObj);
+  }
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  return <div>
+            <Chatbox 
+              messages={messages}
+              _onSendMessage={_onSendMessage} 
+            />
+        </div>
+}
+```
+Note: All backend/Database related actions need to be handled in _onSendMessage event.
 
-### `npm run eject`
+## Props
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+|Name|Type|Required|Default Value|Description
+|:----|:----|:----|:----|:----|
+|brandName|String|No|Package Name|Allows to display your app name on component's header.|
+|brandLogo|String|No|Package's Logo|Allows to use your own app's logo on the chat header.|
+|brandLogoHeight|String|No|30px|Allows to set the height of brand logo of your app.|
+|brandLogoWidth|String|No|30px|Allows to set the width of brand logo of your app.|
+|theme|String|No|#0099cc|Allows to change the theme color of the component according to your app's theme.|
+|themeTextColor|String|No|#ffffff|Allows to change the theme text color of the component.|
+|avatar|Boolean|No|true|If disabled, user's avatars in messages will not be displayed.|
+|emoji|Boolean|No|true|If disabled, emoji options will be hidden.|
+|sound|Boolean|No|true|if disabled, message notification tune will be paused.|
+|messages|Array|Yes|Empty Array|This prop contains list of all messages in an array with a specific object structure.|
+|_onSendMessage|Function|Yes| |This methods handles the event of pressing enter or send message button action. It allows you to handle backend/database related actions to update DB and message arrays.|
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Message Object
+```javascript
+    {
+        avatar: user_avatar.png,
+        auther: 'me | other',
+        auther_name: 'Demo User',
+        data: 'Hello world...',
+        created_at: 'Aug 28, 2022'
+    }
+```
+## Authors
 
-## Learn More
+- [@ahmedmalik93](https://github.com/ahmedmalik93)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+[MIT](https://choosealicense.com/licenses/mit/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

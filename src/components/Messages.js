@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useCallback } from 'react';
-import messageNotification from '../assets/notification.mp3';
+const messageNotification = require('./assets/notification.mp3');
 
-const userIcon = require('../assets/user.png');
+const userIcon = require('./assets/user.png');
 
 
 const Messages = ({ theme="#0099cc", messages, avatar = true, sound = true }) => { 
@@ -33,7 +33,7 @@ const Messages = ({ theme="#0099cc", messages, avatar = true, sound = true }) =>
             {messages?.length > 0 ? messages.map((e, i) =>
                 <div className={`chatup_message chatup_${e.auther}`} key={i}>
                     {avatar &&
-                        <div>
+                        <div> 
                             <img src={e.avatar ? e.avatar : userIcon} alt="User" />
                         </div>
                     }

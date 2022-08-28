@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import EmojiPopup from './emoji/EmojiPopup';
 
 
-const SendIcon = require('../assets/send.png');
-const EmojiIcon = require('../assets/emoji.png');
+const SendIcon = require('./assets/send.png');
+const EmojiIcon = require('./assets/emoji.png');
 
 
 
@@ -47,11 +47,11 @@ const InputField = ({ _onSendMessage, emoji = true }) => {
                 <div className="buttonsBox">
                     {emoji &&
                         <div>
-                            {displayEmojis && <EmojiPopup _onEmojiPicked={_onEmojiPicked} />}
+                            {displayEmojis && <EmojiPopup _onEmojiPicked={_onEmojiPicked} />} 
                             <img src={EmojiIcon} onClick={() => _toggleDisplayEmoji()} alt="Emoji" />
                         </div>
                     }
-                    <div>
+                    <div> 
                         <img src={SendIcon} onClick={() => _saveMessage()} alt="Send" />
                     </div>
                 </div>

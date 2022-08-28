@@ -12,7 +12,7 @@ const ChatWindow = (props) => {
     }
  
     return (
-        <div className="chatWindow">
+        <div className="chatWindow"> 
             <Header {...props} toggleChatWindow={toggleChatWindowFromHeader} />
             <Messages {...props} />
             <InputField {...props}  />
