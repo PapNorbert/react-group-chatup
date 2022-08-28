@@ -1,6 +1,6 @@
 {
   "name": "react-group-chatup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React UI Component library to allow developers to integrate easy and responsive group public chatbox window like a forum.",
   "private": false,
   "main": "./dist/index.cjs.js",
