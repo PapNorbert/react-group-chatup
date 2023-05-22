@@ -4,7 +4,7 @@ const messageNotification = require('./assets/notification.mp3');
 const userIcon = require('./assets/user.png');
 
 
-const Messages = ({ theme="#0099cc", messages, avatar = true, sound = true }) => { 
+const Messages = ({ theme="#0099cc", messages, avatar = true, sound = true, noMessagesText = 'No message yet'  }) => { 
     const messagesEndRef = useRef(null);
 
 
@@ -45,7 +45,7 @@ const Messages = ({ theme="#0099cc", messages, avatar = true, sound = true }) =>
                     </div>
                 </div>
             ) :
-                <div className="chatup_noMsgYet">No message yet</div>
+                <div className="chatup_noMsgYet">{noMessagesText}</div>
             }
         </div>
     )
