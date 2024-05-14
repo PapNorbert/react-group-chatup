@@ -1,5 +1,5 @@
 import React from 'react';
-const closeIcon = require('./assets/close-icon.png');
+import closeIcon from './assets/close-icon.png'
 
 const Header = ({ theme="#0099cc", toggleChatWindow, themeTextColor = "#fff", brandName = "Chat Up", brandLogo = "", brandLogoHeight = '30px', brandLogoWidth = '30px' }) => {
 

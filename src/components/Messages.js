@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useCallback } from 'react';
 const messageNotification = require('./assets/notification.mp3');
 
-const userIcon = require('./assets/user.png');
+import userIcon from './assets/user.png';
 
 
 const Messages = ({ theme="#0099cc", messages, avatar = true, sound = true }) => { 

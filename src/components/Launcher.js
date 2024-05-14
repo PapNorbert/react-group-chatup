@@ -1,5 +1,5 @@
 import React from 'react';
-const chatIcon = require('./assets/chat-icon.jpeg');
+import chatIcon from './assets/chat-icon.jpeg';
 
 
 const Launcher = ({toggleChatWindow, theme="#0099cc"}) => { 

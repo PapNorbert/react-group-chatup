@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import EmojiPopup from './emoji/EmojiPopup';
 
 
-const SendIcon = require('./assets/send.png');
-const EmojiIcon = require('./assets/emoji.png');
+import SendIcon from './assets/send.png';
+import EmojiIcon from './assets/emoji.png';
 
 
 
