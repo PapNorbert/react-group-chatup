@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useCallback } from 'react';
-const messageNotification = require('./assets/notification.mp3');
 
 import userIcon from './assets/user.png';
 
@@ -18,8 +17,6 @@ const Messages = ({ theme="#0099cc", messages, avatar = true, sound = true }) =>
 
     const playMessageNotification = useCallback(() => { 
         if (messages?.length > 0 && messages?.at(-1)?.auther !== 'me' && sound) {
-            const audio = new Audio(messageNotification);
-            audio.play();
         } 
     }, [messages, sound])
 
